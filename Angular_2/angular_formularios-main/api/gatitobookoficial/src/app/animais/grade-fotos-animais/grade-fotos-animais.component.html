@@ -4,9 +4,10 @@
   <div *ngFor="let animal of animais" class="col-4">
     <a [routerLink]="['/animais', animal.id]"></a>
     <app-cartao>
-      <app-animal>
+      <app-animal
         [url]="animal.url"
-        [descricao]="animal.descricao"
+        [descricao]="animal.description"
+      >
       </app-animal>
       <i aria-hidden="true" class="fa fa-heart-o fa-1x mr-2">{{animal.likes}}</i>
       <i aria-hidden="true" class="fa fa-comment -o fa-1x mr2 ml-2">{{animal.comments}}</i>
